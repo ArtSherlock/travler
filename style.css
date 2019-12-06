@@ -34,6 +34,8 @@ img {
 
 header {
   background-color: #ebebeb;
+
+  position: relative;
 }
 .container {
   width: 960px;
@@ -45,9 +47,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 
-  padding-top: 42px;
+  padding-top: 41px;
+  margin-bottom: 128px;
+}
+
+.logo {
+  margin-right: 80px;
 }
 
 .quicklinks {
@@ -85,15 +91,15 @@ header {
   background-color: #c7c7c7;
 }
 
-/* .rotate-txt {
-  transform: rotate(-90deg);
-} */
-
 .drop {
   font: 700 12px 'Lato', sans-serif;
   color: #58159b;
 
   position: relative;
+
+  cursor: pointer;
+
+  margin-left: 15px;
 }
 
 .drop::after {
@@ -109,19 +115,102 @@ header {
   background: url(img/arrows.png) 0 0 no-repeat;
 }
 
+.search-form input {
+  width: 299px;
+  height: 46px;
 
+  border: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
 
+  background: url(img/clock.svg) white 263px center no-repeat;
 
+  padding: 12px 20px;
+
+  font: 700 12px 'Lato', sans-serif;
+  color: #959595;  
+}
+
+input[type='search']::-webkit-search-decoration, 
+input[type='search']::-webkit-search-cancel-button, 
+input[type='search']::-webkit-search-results-button, 
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
+
+input:focus::-webkit-input-placeholder {color:transparent;}
 
 .menu {
+  position: absolute;
+  top: 130px;
+
   display: flex;
   justify-content: space-around;
+
+  width: 941px;
+  height: 113px;
+
+  background-image: linear-gradient(to top, #d7d7d7 0%, #ffffff 100%);
+
+  border-bottom-width: 5px;
+  border-bottom-color: royalblue;
+
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 0 -5px 0 #8038c2;
+
+  text-align: center;
+  padding-top: 18px;
 }
+
+.menu a {
+  font: 700 17px/27px 'PT Sans', sans-serif;
+  color: #707070;  
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li {
+  
+}
+
+.menu li a::after {
+  content: "";
+
+  position: absolute;  
+  right: -50px;
+  top: -18px;
+
+  width: 1px;
+  height: 108px;
+
+  background-color: #d4d4d4;
+}
+
+.menu li:last-child a::after {
+  content: "";
+
+  background-color: transparent;
+}
+/* 
+.menu li::before {
+  content: "";
+
+  position: absolute;
+  left: -50px;
+  
+  
+  height: 5px;
+
+  box-shadow: inset 0 -5px 0 #33445a;
+}
+
+menu li::before {
+width: 165px;
+} */
 
 
 .main-bg {
-  background-color: #5f2c64;  
-
-  line-height:0;
-  text-align: center;
+  background: url(img/header.jpg) #5f2c64 center 0 no-repeat;
+  height: 537px;
 }
